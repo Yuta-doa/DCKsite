@@ -1,122 +1,64 @@
-/* 基本設定 */
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News One クローン</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    <header>
+        <div class="logo">NEWS <span>ONE</span></div>
+        <nav>
+            <ul>
+                <li>社会</li>
+                <li>政治</li>
+                <li>経済</li>
+                <li>国際</li>
+                <li>科学・文化</li>
+            </ul>
+        </nav>
+    </header>
 
-/* ヘッダー */
-header {
-    background-color: #000;
-    border-bottom: 1px solid #333;
-    padding: 15px 50px;
-    display: flex;
-    align-items: center;
-}
+    <main class="container">
+        
+        <div class="breaking-news">
+            <span class="live-tag">LIVE</span> 山梨県内で山林火災 現場の映像
+        </div>
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 40px;
-}
+        <div class="grid-layout">
+            <section class="top-news">
+                <h2>トップニュース</h2>
+                <div class="main-article">
+                    <div class="image-placeholder">
+                        <span class="price">54020.65</span>
+                    </div>
+                    <div class="article-content">
+                        <h3>株価 初の5万4000円台 取引時間中の最高値更新</h3>
+                        <p class="date">1月14日 午前9時58分</p>
+                        <span class="category-tag">株価・為替</span>
+                    </div>
+                </div>
+            </section>
 
-.logo span {
-    font-weight: normal;
-    font-size: 0.8em;
-}
+            <aside class="side-content">
+                <section class="video-section">
+                    <h3>最新・注目の動画</h3>
+                    <div class="video-placeholder">
+                        <div class="play-button">▶</div>
+                    </div>
+                </section>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+                <section class="weather-section">
+                    <h3>天気予報・防災情報</h3>
+                    <div class="weather-placeholder">
+                        <p>日本地図（天気）</p>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
 
-/* 速報バー */
-.breaking-news {
-    background-color: #1a1a1a;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    border-left: 4px solid #d32f2f;
-}
-
-.live-tag {
-    background-color: #d32f2f;
-    padding: 2px 8px;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-/* レイアウト */
-.grid-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-}
-
-/* メイン記事 */
-.main-article {
-    display: flex;
-    gap: 20px;
-    background-color: #000;
-    padding-top: 20px;
-    border-top: 1px solid #333;
-}
-
-.image-placeholder {
-    width: 300px;
-    height: 180px;
-    background: linear-gradient(45deg, #003366, #0066cc);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.article-content h3 {
-    font-size: 22px;
-    margin: 0 0 10px 0;
-}
-
-.category-tag {
-    border: 1px solid #888;
-    padding: 2px 8px;
-    font-size: 12px;
-    color: #ccc;
-}
-
-/* サイドバー */
-.video-placeholder, .weather-placeholder {
-    width: 100%;
-    height: 200px;
-    background-color: #222;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.play-button {
-    font-size: 50px;
-    color: rgba(255,255,255,0.5);
-}
-
-/* スマホ対応 */
-@media (max-width: 768px) {
-    .grid-layout {
-        grid-template-columns: 1fr;
-    }
-    .main-article {
-        flex-direction: column;
-    }
-}
+</body>
+</html>
