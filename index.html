@@ -92,6 +92,13 @@
                         </div>
                     </div>
                 </section>
+                <script>
+  if (window.location.hostname === 'news-web-dck.vercel.app') {
+    if (!window.location.pathname.startsWith('/newsweb')) {
+      window.location.href = '/newsweb/index.html';
+    }
+  }
+</script>
             </aside>
         </div>
     </main>
